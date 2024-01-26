@@ -1,0 +1,56 @@
+/* src/styles/SearchBooks.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    vertical-align: top;
+  }
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre tarjetas */
+  justify-content: center; /* Centrar las tarjetas */
+
+}
+
+.book-card {
+  background-color: #333; /* Color de fondo de la tarjeta */
+  color: white; /* Color del texto en la tarjeta */
+  padding: 15px;
+  border-radius: 8px;
+  width: 300px; /* Ancho de cada tarjeta */
+}
+
+/* styles/SearchBooks.css */
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+}
+
+/* Agrega estilos adicionales según tus preferencias */
