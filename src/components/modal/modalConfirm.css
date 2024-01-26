@@ -1,0 +1,31 @@
+/* modalConfirm.css */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.modal {
+    background: white;
+    border-radius: 5px;
+    width: 200px; 
+    height: 200px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between; 
+}
+

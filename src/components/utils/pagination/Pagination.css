@@ -1,0 +1,11 @@
+button{
+    margin-bottom: 50px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; 
+    list-style: none;       
+    padding: 0;             
+  }
+  
