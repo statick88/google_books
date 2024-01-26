@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/general/Header"; // Asegúrate de que la ruta sea correcta
-import Footer from "./components/general/Footer"; // Asegúrate de que la ruta sea correcta
+import Header from "./components/general/Header"; 
+import Footer from "./components/general/Footer"; 
 import SearchBooks from "./components/utils/SearchBooks";
 import Home from "./components/Home";
 import FavoriteBooks from "./components/pages/Fav";
