@@ -6,6 +6,8 @@ import '../styles/SearchBooks.css';
 const SearchBooks = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [books, setBooks] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3; // Cambia esto al número de elementos que quieres por página
 
   const searchBooks = async () => {
     const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
@@ -15,11 +17,18 @@ const SearchBooks = () => {
     });
 
     const uniqueBooks = Array.from(new Set(response.data.items.map(book => book.volumeInfo.title)))
-      .slice(0, 10)
       .map(title => response.data.items.find(book => book.volumeInfo.title === title));
 
     setBooks(uniqueBooks);
   };
+
+  const totalPages = Math.ceil(books.length / itemsPerPage);
+
+  const changePage = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
+  const currentBooks = books.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
   const renderBookCard = (book) => (
     <div key={book.id} className="book-card">
@@ -51,9 +60,17 @@ const SearchBooks = () => {
         <p>No se encontraron resultados</p>
       ) : (
         <div className="books-container">
-          {books.map(book => renderBookCard(book))}
+          {currentBooks.map(book => renderBookCard(book))}
         </div>
       )}
+
+      <div>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button key={index} onClick={() => changePage(index)}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
