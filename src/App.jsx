@@ -1,20 +1,23 @@
-// App.jsx
-import { Route, Routes } from 'react-router-dom';
-import SearchBooks from './components/SearchBooks';
-import Home from './components/Home';
-import './App.css'; // Asegúrate de importar tu archivo de estilos aquí
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/general/Header"; 
+import Footer from "./components/general/Footer"; 
+import SearchBooks from "./components/utils/SearchBooks";
+import Home from "./components/Home";
+import FavoriteBooks from "./components/pages/Fav";
+import "./App.css";
 
 const App = () => {
   return (
-    <div className="app-container"> {/* Agregamos una clase para el fondo oscuro */}
-      <h1>Buscador de libros</h1>
+    <div>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<SearchBooks />} />
+        <Route path="/favoritos" element={<FavoriteBooks />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
 
 export default App;
-
