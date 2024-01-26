@@ -15,7 +15,7 @@ Necesitarás tener Node.js y npm instalados en tu máquina.
 Primero, clona el repositorio:
 
 ```bash
-git clone `https://github.com/statick88/google_books`
+git clone https://github.com/statick88/google_books
 ```
 Luego, instala las dependencias con npm:
 ```bash
