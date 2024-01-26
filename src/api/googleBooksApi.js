@@ -1,14 +1,20 @@
-// src/api/googleBooksApi.js
+// Importamos axios para hacer solicitudes HTTP
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_API_KEY;
-const BASE_URL = 'https://www.googleapis.com/books/v1/volumes';
-
-const axiosInstance = axios.create({
-  baseURL: BASE_URL,
-  params: {
-    key: API_KEY,
-  },
+// Creamos una instancia de axios con la URL base de la API de Google Books
+const api = axios.create({
+  baseURL: 'https://www.googleapis.com/books/v1',
 });
 
-export default axiosInstance;
+// Definimos la función getBooks que buscará libros basado en un término de búsqueda
+export const getBooks = async (searchTerm) => {
+  // Hacemos una solicitud GET a la API de Google Books con el término de búsqueda
+  const response = await api.get('/volumes', {
+    params: {
+      q: searchTerm,
+    },
+  });
+
+  // Devolvemos los libros de la respuesta
+  return response.data.items;
+};
