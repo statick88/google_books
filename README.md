@@ -36,9 +36,9 @@ Para buscar libros, simplemente introduce tu término de búsqueda en el campo d
 
 ## Mejoras Futuras
 
-- ✅ Añadir paginación a los resultados de la búsqueda.
-- ❌ Permitir a los usuarios guardar libros en una lista de favoritos.
-- ❌ Mejorar el diseño y la experiencia de usuario.
+- Añadir paginación a los resultados de la búsqueda.
+- Permitir a los usuarios guardar libros en una lista de favoritos.
+- Mejorar el diseño y la experiencia de usuario.
 
 # Licencia
 Este proyecto está licenciado bajo la Licencia MIT - vea el archivo LICENSE.md para más detalles.
